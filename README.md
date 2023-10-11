@@ -1,4 +1,4 @@
-# BlissFul Bali
+# BlissFulBali
 
 ## Institusi
 SMK TI Bali Global Singaraja
