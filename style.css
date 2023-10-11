@@ -1631,11 +1631,24 @@ summary {
     display: none;
 }
 
+.button-text:hover,
+.a-kelingking-beach-text:hover,
+.button-hot-place:hover,
+.a-book-now:hover,
+.a-souvenirs:hover,
+.a-button-faq:hover,
+.a-book-now-slide:hover {
+    background-color: #00567b;
+}
+
+.button-hot-place:hover {
+    cursor: pointer;
+}
 
 
 
 /* <----------- Responsive ----------> */
-@media (max-width: 500px) {
+@media (max-width: 480px) {
     .header {
         display: none;
     }
@@ -2338,8 +2351,8 @@ summary {
         padding: 5px;
         border-radius: 3px;
         background-color: #0087C1;
-        width: 30%;
-        height: 10%;
+        width: 25%;
+        height: 8%;
         margin-top: 10px;
         margin-left: 10px;
         font-size: 20px;
@@ -2442,16 +2455,6 @@ summary {
 
     .div-map-kelingking-beach {
         display: none;
-    }
-
-    .button-text:hover,
-    .a-kelingking-beach-text:hover,
-    .button-hot-place:hover,
-    .a-book-now:hover,
-    .a-souvenirs:hover,
-    .a-button-faq:hover,
-    .a-book-now-slide:hover {
-        background-color: #00567b;
     }
 
     .button-text,
