@@ -27,6 +27,12 @@ window.addEventListener("scroll", function() {
     // backdrop-filter: blur(8px); 
 });
 
+
+
+
+
+
+
 // ----------Waterfall Image----------
 
 // function changeBackgroundImageWaterfall() {
@@ -222,31 +228,67 @@ function setNavigationActiveSection(index) {
 }
 
 // <---------- Window Scroll Event ---------->
+// <---------- Window Scroll Event ---------->
 let element = document.querySelector('.animation')
-window.addEventListener('scroll', function() {
-    if ( window.scrollY < document.querySelector('#place').offsetTop -100) {
+// let element = document.querySelector('.animation')
+if (window.innerWidth <= 1023) {
+    window.addEventListener('scroll', function() {
+        if ( window.scrollY < document.querySelector('#place').offsetTop -100) {
         setNavigationActiveSection(0);
-        element.style.left = '50.6vw'
+        element.style.left = '49vw'
     }
     else if (window.scrollY >= document.querySelector('#place').offsetTop -100 && window.scrollY < document.querySelector('#place').offsetTop + document.querySelector('#place').clientHeight -100) {
         setNavigationActiveSection(1);
-        element.style.left = '59vw'
+        element.style.left = '57.3vw'
     }
     else if (window.scrollY >= document.querySelector('#rest-place').offsetTop -100 && window.scrollY < document.querySelector('#rest-place').offsetTop + document.querySelector('#rest-place').clientHeight - 100) {
         setNavigationActiveSection(2);
-        element.style.left = '67.6vw'
+        element.style.left = '66vw'
     }
 
     else if (window.scrollY >= document.querySelector('#souvenirs').offsetTop -100 && window.scrollY < document.querySelector('#souvenirs').offsetTop + document.querySelector('#souvenirs').clientHeight - 100) {
         setNavigationActiveSection(3);
-        element.style.left = '77.5vw'
+        element.style.left = '76vw'
     }
 
     else if (window.scrollY >= document.querySelector('#other').offsetTop -100 && window.scrollY < document.querySelector('#other').offsetTop + document.querySelector('#other').clientHeight - 100) {
         setNavigationActiveSection(4);
-        element.style.left = '87vw'
+        element.style.left = '86vw'
     }
-})
+    })
+}
+
+else {
+    window.addEventListener('scroll', function() {
+        if ( window.scrollY < document.querySelector('#place').offsetTop -100) {
+            setNavigationActiveSection(0);
+            element.style.left = '50.6vw'
+        }
+        else if (window.scrollY >= document.querySelector('#place').offsetTop -100 && window.scrollY < document.querySelector('#place').offsetTop + document.querySelector('#place').clientHeight -100) {
+            setNavigationActiveSection(1);
+            element.style.left = '59vw'
+        }
+        else if (window.scrollY >= document.querySelector('#rest-place').offsetTop -100 && window.scrollY < document.querySelector('#rest-place').offsetTop + document.querySelector('#rest-place').clientHeight - 100) {
+            setNavigationActiveSection(2);
+            element.style.left = '67.6vw'
+        }
+    
+        else if (window.scrollY >= document.querySelector('#souvenirs').offsetTop -100 && window.scrollY < document.querySelector('#souvenirs').offsetTop + document.querySelector('#souvenirs').clientHeight - 100) {
+            setNavigationActiveSection(3);
+            element.style.left = '77.5vw'
+        }
+    
+        else if (window.scrollY >= document.querySelector('#other').offsetTop -100 && window.scrollY < document.querySelector('#other').offsetTop + document.querySelector('#other').clientHeight - 100) {
+            setNavigationActiveSection(4);
+            element.style.left = '87vw'
+        }
+    })
+}
+
+
+
+
+
 
 const sliderContainer = document.querySelector('.slider-container');
         const slides = document.querySelector('.slides');
@@ -343,6 +385,29 @@ function changeImageRightArrow() {
 
 function changeImageRightArrowBack() {
     var element = document.getElementById('next')
+    element.setAttribute("src","assets/right-arrow2.png")
+}
+
+// <---------- arrow in souvenirs 2 ---------->
+// ---------- left arrow ----------
+function changeImageLeftArrow2() {
+    var element = document.getElementById('prev-souvenirs2')
+    element.setAttribute("src","assets/left-arrow2-hover.png")
+}
+
+function changeImageLeftArrowBack2() {
+    var element = document.getElementById('prev-souvenirs2')
+    element.setAttribute("src","assets/left-arrow2.png")
+}
+
+// ---------- right arrow ----------
+function changeImageRightArrow2() {
+    var element = document.getElementById('next-souvenirs2')
+    element.setAttribute("src","assets/right-arrow2-hover.png")
+}
+
+function changeImageRightArrowBack2() {
+    var element = document.getElementById('next-souvenirs2')
     element.setAttribute("src","assets/right-arrow2.png")
 }
 
@@ -515,6 +580,12 @@ function hideSignInDone() {
 document.getElementById('next-hot-place').onclick = function() {
     let lists = document.querySelectorAll('.item');
     document.getElementById('slide').appendChild(lists[0]);
+    
+    lists.forEach( function (list){
+        list.classList.add('item-display-none'); //kasi semua item display none
+    });
+    lists[0].classList.remove('item-display-none'); //cari item paling pertama hapus display none
+
 }
 
 document.getElementById('prev-hot-place').onclick = function() {
@@ -549,53 +620,6 @@ function changeImageRightArrowHotPlaceBack() {
     var element = document.getElementById('next2')
     element.setAttribute("src","assets/nav-right.png")
 }
-
-// <---------- arrow in hot place2 ---------->
-// ---------- left arrow ----------
-function changeImageLeftArrowHotPlace() {
-    var element = document.getElementById('prev-hot-place2')
-    element.setAttribute("src","assets/left-arrow2.png")
-}
-
-function changeImageLeftArrowHotPlaceBack() {
-    var element = document.getElementById('prev-hot-place2')
-    element.setAttribute("src","assets/nav-left.png")
-}
-
-// ---------- right arrow ----------
-function changeImageRightArrowHotPlace() {
-    var element = document.getElementById('next-hot-place2')
-    element.setAttribute("src","assets/right-arrow2.png")
-}
-
-function changeImageRightArrowHotPlaceBack() {
-    var element = document.getElementById('next-hot-place2')
-    element.setAttribute("src","assets/nav-right.png")
-}
-
-// <---------- arrow in rest place2 ---------->
-// ---------- left arrow ----------
-function changeImageLeftArrowHotPlace() {
-    var element = document.getElementById('prev-rest-place2')
-    element.setAttribute("src","assets/left-arrow2.png")
-}
-
-function changeImageLeftArrowHotPlaceBack() {
-    var element = document.getElementById('prev-rest-place2')
-    element.setAttribute("src","assets/nav-left.png")
-}
-
-// ---------- right arrow ----------
-function changeImageRightArrowHotPlace() {
-    var element = document.getElementById('next-rest-place2')
-    element.setAttribute("src","assets/right-arrow2.png")
-}
-
-function changeImageRightArrowHotPlaceBack() {
-    var element = document.getElementById('next-rest-place2')
-    element.setAttribute("src","assets/nav-right.png")
-}
-
 
 
 
@@ -2850,3 +2874,222 @@ document.getElementById('header-phone').onclick = function() {
         element.style.display = 'flex'
     }
 }
+
+
+
+
+function changeName1Souvenirs2() {
+    var element = document.getElementById('name-item-souvenirs2')
+    element.innerHTML = 'Balinese Batik Udeng'
+}
+
+function changeName2Souvenirs2() {
+    var element = document.getElementById('name-item-souvenirs2')
+    element.innerHTML = 'Balinese Barong Shirt'
+}
+
+function changeName3Souvenirs2() {
+    var element = document.getElementById('name-item-souvenirs2')
+    element.innerHTML = 'Coconut Shell Sculpture, "Balinese Dragon King"'
+}
+
+function changeName4Souvenirs2() {
+    var element = document.getElementById('name-item-souvenirs2')
+    element.innerHTML = 'Sidakarya Balinese Mask'
+}
+
+function changeName5Souvenirs2() {
+    var element = document.getElementById('name-item-souvenirs2')
+    element.innerHTML = 'Traditional Balinese Wayang, "Hanoman"'
+}
+
+function changeName6Souvenirs2() {
+    var element = document.getElementById('name-item-souvenirs2')
+    element.innerHTML = 'Lady Tara Buddha Head Pot Garden Statue'
+}
+
+function changeName7Souvenirs2() {
+    var element = document.getElementById('name-item-souvenirs2')
+    element.innerHTML = 'Balinese Womens Kebaya Outfit'
+}
+
+
+
+
+
+
+
+function changePrice1Souvenirs2() {
+    var element = document.getElementById('price-item-souvenirs2')
+    element.innerHTML = 'IDR .50.000'
+}
+
+function changePrice2Souvenirs2() {
+    var element = document.getElementById('price-item-souvenirs2')
+    element.innerHTML = 'IDR .45.000'
+}
+
+function changePrice3Souvenirs2() {
+    var element = document.getElementById('price-item-souvenirs2')
+    element.innerHTML = 'IDR .1.250.000'
+}
+
+function changePrice4Souvenirs2() {
+    var element = document.getElementById('price-item-souvenirs2')
+    element.innerHTML = 'IDR .250.000'
+}
+
+function changePrice5Souvenirs2() {
+    var element = document.getElementById('price-item-souvenirs2')
+    element.innerHTML = 'IDR .350.000'
+}
+
+function changePrice6Souvenirs2() {
+    var element = document.getElementById('price-item-souvenirs2')
+    element.innerHTML = 'IDR .1.100.000'
+}
+
+function changePrice7Souvenirs2() {
+    var element = document.getElementById('price-item-souvenirs2')
+    element.innerHTML = 'IDR .200.000'
+}
+
+document.getElementById('next-souvenirs2').onclick = function() {
+    let image = document.querySelector('.item-souvenirs2');
+    if (image.getAttribute("src") == 'assets/kebaya2.png') {
+        image.src = 'assets/udeng.png'
+        image.style.width = '200px'
+        image.style.height = '160px'
+        changeName1Souvenirs2()
+        changePrice1Souvenirs2()
+        // image.style.marginRight = '-60px'
+    }
+
+    else if (image.getAttribute("src") == 'assets/udeng.png') {
+        image.src = 'assets/barong.png'
+        image.style.width = '150px'
+        image.style.height = '160px'
+        changeName2Souvenirs2()
+        changePrice2Souvenirs2()
+        // image.style.marginRight = '-25px'
+    }
+
+    else if (image.getAttribute("src") == 'assets/barong.png') {
+        image.src = 'assets/coconut-shell-sculpture.png'
+        image.style.width = '150px'
+        image.style.height = '160px'
+        changeName3Souvenirs2()
+        changePrice3Souvenirs2()
+        // image.style.marginRight = '-25px'
+    }
+
+    else if (image.getAttribute("src") == 'assets/coconut-shell-sculpture.png') {
+        image.src = 'assets/mask.png'
+        image.style.width = '220px'
+        image.style.height = '160px'
+        changeName4Souvenirs2()
+        changePrice4Souvenirs2()
+        // image.style.marginRight = '-70px'
+    }
+
+    else if (image.getAttribute("src") == 'assets/mask.png') {
+        image.src = 'assets/wayang.png'
+        image.style.width = '130px'
+        image.style.height = '160px'
+        changeName5Souvenirs2()
+        changePrice5Souvenirs2()
+        // image.style.marginRight = '-70px'
+    }
+
+    else if (image.getAttribute("src") == 'assets/wayang.png') {
+        image.src = 'assets/Lady-Tara-Buddha-Head-Pot-Garden-Statue.png'
+        image.style.width = '130px'
+        image.style.height = '180px'
+        changeName6Souvenirs2()
+        changePrice6Souvenirs2()
+        // image.style.marginRight = '-30px'
+    }
+
+    else if (image.getAttribute("src") == 'assets/Lady-Tara-Buddha-Head-Pot-Garden-Statue.png') {
+        image.src = 'assets/kebaya2.png'
+        image.style.width = '100px'
+        image.style.height = '220px'
+        changeName7Souvenirs2()
+        changePrice7Souvenirs2()
+        // image.style.marginRight = '-30px'
+    }
+}
+
+document.getElementById('prev-souvenirs2').onclick = function() {
+    let image = document.querySelector('.item-souvenirs2');
+    let name = document.querySelector('name-item-souvenirs2');
+    let price = document.getElementById('price-item-souvenirs2');
+
+    if (image.getAttribute("src") == 'assets/kebaya2.png') {
+        image.src = 'assets/Lady-Tara-Buddha-Head-Pot-Garden-Statue.png'
+        image.style.width = '130px'
+        image.style.height = '180px'
+        changeName6Souvenirs2()
+        changePrice6Souvenirs2()
+        // image.style.marginRight = '-60px'
+    }
+
+    else if (image.getAttribute("src") == 'assets/Lady-Tara-Buddha-Head-Pot-Garden-Statue.png') {
+        image.src = 'assets/wayang.png'
+        image.style.width = '130px'
+        image.style.height = '160px'
+        changeName5Souvenirs2()
+        changePrice5Souvenirs2()
+        // image.style.marginRight = '-25px'
+    }
+
+    else if (image.getAttribute("src") == 'assets/wayang.png') {
+        image.src = 'assets/mask.png'
+        image.style.width = '150px'
+        image.style.height = '160px'
+        changeName5Souvenirs2()
+        changePrice5Souvenirs2()
+        // image.style.marginRight = '-25px'
+    }
+
+    else if (image.getAttribute("src") == 'assets/mask.png') {
+        image.src = 'assets/coconut-shell-sculpture.png'
+        image.style.width = '220px'
+        image.style.height = '160px'
+        changeName4Souvenirs2()
+        changePrice4Souvenirs2()
+        // image.style.marginRight = '-70px'
+    }
+
+    else if (image.getAttribute("src") == 'assets/coconut-shell-sculpture.png') {
+        image.src = 'assets/barong.png'
+        image.style.width = '200px'
+        image.style.height = '160px'
+        changeName2Souvenirs2()
+        changePrice2Souvenirs2()
+        // image.style.marginRight = '-70px'
+    }
+
+    else if (image.getAttribute("src") == 'assets/barong.png') {
+        image.src = 'assets/udeng.png'
+        image.style.width = '200px'
+        image.style.height = '160px'
+        changeName1Souvenirs2()
+        changePrice1Souvenirs2()
+        // image.style.marginRight = '-30px'
+    }
+
+    else if (image.getAttribute("src") == 'assets/udeng.png') {
+        image.src = 'assets/kebaya2.png'
+        image.style.width = '100px'
+        image.style.height = '220px'
+        changeName7Souvenirs2()
+        changePrice7Souvenirs2()
+        // image.style.marginRight = '-30px'
+    }
+}
+
+
+
+
+

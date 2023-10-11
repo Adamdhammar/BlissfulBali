@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlissfulBali</title>
+    <link rel="shortcut icon" href="assets/icon-website.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
         <!-- --- font awesome link ---  -->
         <script src="https://kit.fontawesome.com/00cdfd7425.js" crossorigin="anonymous"></script>
@@ -25,15 +26,18 @@
                 </div>
             </nav>
         </div>
-        <div class="div-main-header-phone">
+        <div class="navbar">
             <img src="assets/logo2.png" alt="" width="80px" class="logo2-phone">
             <div class="header-phone" id="header-phone">
-                <i class="fa-solid fa-list"></i>
+                <div class="div-nav-phone">
+                    <i class="fa-solid fa-bars" style="z-index: -1;"></i>
+                    <img src="assets/logo1.png" alt="" width="180px" style="margin-left: 35vw; margin-bottom: -7px;">
+                </div>
                 <div class="div-nav-a-phone" id="div-nav-a-phone">
                     <a class="a-navigation-phone" href="#home">Home</a>
                     <a class="a-navigation-phone" href="#place">Places</a>
                     <a class="a-navigation-phone" href="#rest-place">Hotels</a>
-                    <a class="a-navigation-phone" href="#souvenirs">Souvenirs</a>
+                    <a class="a-navigation-phone" href="#souvenirs2">Souvenirs</a>
                     <a class="a-navigation-phone" href="#other">Other</a>
                 </div>
             </div>
@@ -78,7 +82,7 @@
                 <img src="assets/nusaPenida.png" alt="" class="map-nusa-penida">
                 <div class="div-location">
                     <img src="assets/map1.png" alt="" class="map-image">
-                    <p>Bunga Mekar, Kec. Nusa Penida, Regency Kelungkung, Bali 80771</p>
+                    <p>Bunga Mekar Village, Nusa Penida District, Klungkung Regency, Bali</p>
                 </div>
             </div>
         </div>
@@ -163,53 +167,53 @@
 
         <div class="container" id="hot-place">
             <div id="slide">
-                <div id="item1" class="item" style="background-image: url(assets/Gitgit.png);">
+                <div id="item1" class="item" style="background-image: url(assets/Gitgit.png); background-position: center;">
                     <div class="content">
-                        <div id="title-item1" class="name" style="font-size: 4vw; text-shadow: 1px 3px 10px black;">Gitgit</div>
-                        <button>Find More</button>
+                        <div id="title-item1" class="name" style="font-size: 4vw; text-shadow: 1px 3px 10px black;">GITGIT WATERFALL</div>
+                        <button class="button-hot-place" onclick="showPopUpLogin()">Find More</button>
                         <div class="div-location-hot-place">
                             <img src="assets/map.png" alt="" width="35" height="25">
-                            <div class="des" style="text-shadow: 1px 3px 10px black; font-family: popins-extra-bold;" id="location-hot-place1">Sekumpul, Lemukih, Sawan, Buleleng, Bali</div>
+                            <div class="des" style="text-shadow: 1px 3px 10px black; font-family: popins-extra-bold;" id="location-hot-place1">Gitgit Village, Sukasada District, Buleleng Regency, Bali</div>
                         </div>
                     </div>
                 </div>
                 <div id="item2" class="item" style="background-image: url(assets/Sekumpul.png);">
                     <div class="content">
                         <div id="title-item2" class="name" style="font-size: 4vw; text-shadow: 1px 3px 10px black;">SEKUMPUL WATERFALL</div>
-                        <button>Find More</button>
+                        <button class="button-hot-place" onclick="showPopUpLogin()">Find More</button>
                         <div class="div-location-hot-place">
                             <img src="assets/map.png" alt="" width="35" height="25">
-                            <div class="des" style="text-shadow: 1px 3px 10px black; font-family: popins-extra-bold;" id="location-hot-place2">Sekumpul, Lemukih, Sawan, Buleleng, Bali</div>
+                            <div class="des" style="text-shadow: 1px 3px 10px black; font-family: popins-extra-bold;" id="location-hot-place2">Sekumpul Village, Sawan District, Buleleng Regency, Bali</div>
                         </div>
                     </div>
                 </div>
                 <div id="item3" class="item" style="background-image: url(assets/Tamblingan.png);">
                     <div class="content">
-                        <div id="title-item3" class="name" style="font-size: 4vw; text-shadow: 1px 3px 10px black;">TABLINGAN</div>
-                        <button>Find More</button>
+                        <div id="title-item3" class="name" style="text-shadow: 1px 3px 10px black;">TABLINGAN LAKE</div>
+                        <button class="button-hot-place" onclick="showPopUpLogin()">Find More</button>
                         <div class="div-location-hot-place">
                             <img src="assets/map.png" alt="" width="35" height="25">
-                            <div class="des" style="text-shadow: 1px 3px 10px black; font-family: popins-extra-bold;" id="location-hot-place3">Sekumpul, Lemukih, Sawan, Buleleng, Bali</div>
+                            <div class="des" style="text-shadow: 1px 3px 10px black; font-family: popins-extra-bold;" id="location-hot-place3">Munduk Village, Banjar District, Buleleng Regency, Bali</div>
                         </div>
                     </div>
                 </div>
                 <div id="item4" class="item" style="background-image: url(assets/HotSpringBanjar.png);">
                     <div class="content">
                         <div id="title-item4" class="name" style="font-size: 4vw; text-shadow: 1px 3px 10px black;">HOT SPRING BANJAR</div>
-                        <button>Find More</button>
+                        <button class="button-hot-place" onclick="showPopUpLogin()">Find More</button>
                         <div class="div-location-hot-place">
                             <img src="assets/map.png" alt="" width="35" height="25">
-                            <div class="des" style="text-shadow: 1px 3px 10px black; font-family: popins-extra-bold;" id="location-hot-place4">Sekumpul, Lemukih, Sawan, Buleleng, Bali</div>
+                            <div class="des" style="text-shadow: 1px 3px 10px black; font-family: popins-extra-bold;" id="location-hot-place4">Banjar Street, Banjar District, Buleleng Regency, Bali</div>
                         </div>
                     </div>
                 </div>
                 <div id="item5" class="item" style="background-image: url(assets/AlingAling.png);">
                     <div class="content">
                         <div id="title-item5" class="name" style="font-size: 4vw; text-shadow: 1px 3px 10px black;">ALING-ALING WATERFALL</div>
-                        <button>Find More</button>
+                        <button class="button-hot-place" onclick="showPopUpLogin()">Find More</button>
                         <div class="div-location-hot-place">
                             <img src="assets/map.png" alt="" width="35" height="25">
-                            <div class="des" style="text-shadow: 1px 3px 10px black; font-family: popins-extra-bold;" id="location-hot-place5">Sekumpul, Lemukih, Sawan, Buleleng, Bali</div>
+                            <div class="des" style="text-shadow: 1px 3px 10px black; font-family: popins-extra-bold;" id="location-hot-place5">Sambangan Village, Sukasada District, Buleleng Regency, Bali</div>
                         </div>
                     </div>
                 </div>
@@ -220,25 +224,6 @@
             </div>
         </div>
 
-        <div class="div-hot-place2">
-            <div class="div-map-and-title-location">
-                <img src="assets/map-hot-place.png" alt="" width="50px">
-                <h2 style="margin-left: 10px; font-style: italic;">BULELENG</h2>
-            </div>
-            <div class="div-information-hot-place2">
-                <h1 style="text-align: center;">SEKUMPUL WATERFALL</h1>
-                <a href="" class="a-hot-place2">Find More</a>
-                <div class="div-location-hot-place2">
-                    <img src="assets/map.png" alt="" width="30px">
-                    <p style="text-shadow: 1px 3px 20px black;">Sekumpul, lemukih, Sawan, Buleleng, Bali</p>
-                </div>
-            </div>
-            <div class="div-arrow-hot-place2">
-                <img onmouseover="changeImageLeftArrow()" onmouseout="changeImageLeftArrowBack()" src="assets/left-arrow2.png" alt="" width="70px" id="prev-hot-place2" class="left-arrow2">
-                <img onmouseover="changeImageRightArrow()" onmouseout="changeImageRightArrowBack()" src="assets/right-arrow2.png" alt="" width="70px" id="next-hot-place2" class="right-arrow2">
-            </div>
-        </div>
-
         <div class="main-div-rest-place" id="rest-place">
             <div class="div-rest-place-title">
                 <h1 class="rest-place-title" style="font-family: popins-medium; color: #000E41;">Book Your Stay for an Unforgettable Journey</h1>
@@ -246,7 +231,7 @@
             <div class="sub-main-rest-place">
                 <div class="div1-rest-place">
                     <div class="div2-rest-place-title">
-                        <h2 id="rest-place-title" class="rest-place-title-h2" style="font-family: popins-medium; color: #000E41;">Find your rest place in <span style="font-family: popins-extra-bold;">Buleleng</span></h2>
+                        <h2 id="rest-place-title" class="rest-place-title-h2" style="font-family: popins-medium; color: #000E41;">Find your rest place in <span style="font-family: popins-extra-bold; font-size: 30px;">Buleleng</span></h2>
                         <h4 style="font-family: popins-medium; color: #000E41;">Discover superb hotels</h4>
                     </div>
                     <div class="div-example-rest-place">
@@ -291,24 +276,6 @@
             </div>
         </div>
 
-        <div class="div-rest-place2">
-            <h1 style="color: #000E41; font-family: popins-medium; text-align: center; margin-bottom: 50px;">Find your rest place in <span style="font-family: popins-medium;">BULELENG</span></h1>
-            <div class="div-content-rest-place">
-                <a href="" class="a-rest-place2">Book Now!</a>
-                <div class="div-title-and-location-hot-place">
-                    <h3 style="margin: 0;">Kastara Resort</h3>
-                    <div class="div-location-img-and-p">
-                        <img src="assets/map.png" alt="" width="30px">
-                        <p>Hotel in Sambahan, Ubud</p>
-                    </div>
-                </div>
-            </div>
-            <div class="div-arrow-rest-place2">
-                <img onmouseover="changeImageLeftArrow()" onmouseout="changeImageLeftArrowBack()" src="assets/left-arrow2.png" alt="" width="70px" id="prev-rest-place2" class="left-arrow2">
-                <img onmouseover="changeImageRightArrow()" onmouseout="changeImageRightArrowBack()" src="assets/right-arrow2.png" alt="" width="70px" id="next-rest-place2" class="right-arrow2">
-            </div>
-        </div>
-
         <div class="div-main-souvenirs" id="souvenirs">
             <div class="div1-2-souvenirs">
                 <div class="div1-souvenirs">
@@ -336,7 +303,7 @@
                                         <h6 style="color: #000E41;">IDR .50.000</h6>
                                         <img src="assets/grey-heart.png" alt="" width="30px" class="heart-img">
                                     </div>
-                                    <img src="assets/udeng.png" alt="" width="300px" height="150px" class="udeng-img">
+                                    <img src="assets/udeng.png" alt="" width="150px" height="150px" class="udeng-img">
                                 </div>
                                 <div class="div-item2">
                                     <div class="div-text-item1">
@@ -344,7 +311,7 @@
                                         <h6 style="color: #000E41;">IDR .45.000</h6>
                                         <img src="assets/grey-heart.png" alt="" width="30px" class="heart-img">                                
                                     </div>
-                                    <img src="assets/barong.png" alt="" width="100px" height="150px" class="udeng-img">
+                                    <img src="assets/barong.png" alt="" width="135px" height="150px" class="udeng-img">
                                 </div>
                             </div>
                         </div>
@@ -365,7 +332,7 @@
                                         <h6 style="color: #000E41;">IDR .250.000</h6>
                                         <img src="assets/grey-heart.png" alt="" width="30px" class="heart-img">
                                     </div>
-                                    <img src="assets/mask.png" alt="" width="300px" height="150px" class="udeng-img">
+                                    <img src="assets/mask.png" alt="" width="130px" height="150px" class="udeng-img">
                                 </div>
                             </div>
                         </div>
@@ -377,7 +344,7 @@
                                         <h6 style="color: #000E41;">IDR .350.000</h6>
                                         <img src="assets/grey-heart.png" alt="" width="30px" class="heart-img">
                                     </div>
-                                    <img src="assets/wayang.png" alt="" width="300px" height="150px" class="udeng-img">
+                                    <img src="assets/wayang.png" alt="" width="130px" height="150px" class="udeng-img">
                                 </div>
                                 <div class="div-item6">
                                     <div class="div-text-item1">
@@ -401,7 +368,7 @@
             </div>
         </div>
 
-        <div class="div-souvenirs2">
+        <div class="div-souvenirs2" id="souvenirs2">
             <h1 style="color: white; text-align: center;">Take A Piece Of BALI Home With You</h1>
             <div class="div2-souvenirs2">
                 <div class="slider-container-souvenirs2">
@@ -409,24 +376,25 @@
                         <div class="slide">
                             <div class="container-item1-souvenirs2">
                                 <div class="div-item-img">
-                                    <img src="assets/kebaya2.png" alt="" width="100px">
-                                    <img src="assets/grey-heart.png" alt="" width="30px">
+                                    <img src="assets/kebaya2.png" alt="" width="100px" id="item-souvenirs2" class="item-souvenirs2">
                                 </div>
-                                <p>Balinese Women's Kebaya Outfit</p>
-                                <p style="font-weight: bold;">IDR .200.000</p>
+                                <div class="div-description-souvenirs2">
+                                    <p id="name-item-souvenirs2">Balinese Women's Kebaya Outfit</p>
+                                    <p style="font-weight: bold;" id="price-item-souvenirs2">IDR .200.000</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="div-arrow">
-                        <img onmouseover="changeImageLeftArrow()" onmouseout="changeImageLeftArrowBack()" src="assets/left-arrow2.png" alt="" width="70px" id="prev-souvenirs2" class="left-arrow2">
-                        <img onmouseover="changeImageRightArrow()" onmouseout="changeImageRightArrowBack()" src="assets/right-arrow2.png" alt="" width="70px" id="next-souvenirs2" class="right-arrow2">
+                        <img onmouseover="changeImageLeftArrow2()" onmouseout="changeImageLeftArrowBack2()" src="assets/left-arrow2.png" alt="" width="70px" id="prev-souvenirs2" class="left-arrow2">
+                        <img onmouseover="changeImageRightArrow2()" onmouseout="changeImageRightArrowBack2()" src="assets/right-arrow2.png" alt="" width="70px" id="next-souvenirs2" class="right-arrow2">
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="div-main-testimonials" id="other">
-            <h1 class="title-testimonials" style="color: #000E41;">Testimonials Experiences Worth Sharing</h1>
+            <h1 class="title-testimonials" style="color: #000E41; font-family: popins-extra-bold;">Testimonials Experiences Worth Sharing</h1>
             <div class="div-main-comments">
                 <div class="div1-comments">
                     <div class="div-comments">
@@ -499,8 +467,8 @@
             </div>
             <div class="div2-faq">
                 <div class="title-faq2">
-                    <h1 style="margin: 0; text-align: center;" class="FAQ">FAQ</h1>
-                    <p style="margin: 0; text-align: center;" class="FAQ-p">Frequently Asked Question</p>
+                    <h1 style="margin: 0; text-align: center; font-family: popins-extra-bold;" class="FAQ">FAQ</h1>
+                    <p style="margin: 0; text-align: center; font-family: popins-extra-bold;" class="FAQ-p">Frequently Asked Question</p>
                 </div>
                 <details>
                     <summary>What are the additional features on this website that distinguish it from other travel destination websites? <img src="assets/plus.png" alt="" width="12"></summary>
