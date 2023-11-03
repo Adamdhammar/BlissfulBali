@@ -1,3 +1,7 @@
+* {
+    /* border: 1px solid red; */
+}
+
 @font-face {
     font-family: popins-extra-bold;
     src: url(fonts/Poppins-ExtraBold.ttf);
@@ -231,6 +235,10 @@ a:nth-child(5):hover~.animation {
 .place {
     width: 100%;
     box-shadow: 0px 28px 45px 0px rgba(0, 0, 0, 0.50);
+}
+
+.place:hover {
+    cursor: pointer;
 }
 
 
@@ -2260,7 +2268,7 @@ summary {
 
     .item .content {
         position: absolute;
-        top: 18%;
+        top: 8%;
         left: 50px;
         width: 80%;
         text-align: left;
@@ -2553,6 +2561,18 @@ summary {
     .div-pop-up-login {
         width: 40%;
         height: 60%;
+    }
+
+    .div-pop-up-sign-in {
+        width: 80%;
+    }
+
+    .title-sign-in {
+        margin-top: 60px;
+    }
+
+    .div-close-pop-up {
+        width: 17%;
     }
 }
 
